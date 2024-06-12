@@ -46,5 +46,5 @@ spark-by-examples.jar
 
 ```shell
 spark-submit \
-    /Users/luanmorenomaciel/GitHub/series-spark/src/first_app.py
+    $HOME/spark-course/src/first_app.py
 ```
