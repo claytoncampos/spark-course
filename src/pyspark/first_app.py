@@ -11,7 +11,7 @@ print(SparkConf().getAll())
 spark.sparkContext.setLogLevel("INFO")
 
 # extract {E}
-users_filepath = "/home/clay/workspace/firstProject/src/readme.md"
+users_filepath = "/src/readme.md"
 df_users = spark.read.text(users_filepath)
 df_users.show()
 
