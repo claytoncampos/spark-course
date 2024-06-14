@@ -1,6 +1,6 @@
 # import libraries & init spark session
 from pyspark.sql import SparkSession
-spark = SparkSession.builder.appName('first_app').getOrCreate()
+spark = SparkSession.builder.appName('app_elt').getOrCreate()
 
 # load one archive
 df_device = spark.read.json('/home/clay/workspace/firstProject/docs/files/device/device_2022_6_7_19_39_24.json')

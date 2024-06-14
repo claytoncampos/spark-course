@@ -6,7 +6,7 @@ from pyspark.sql import SparkSession
 from pyspark import SparkConf
 
 
-spark = SparkSession.builder.appName("etl-job-users").getOrCreate()
+spark = SparkSession.builder.appName("first-app").getOrCreate()
 
 #configs
 print(spark)
