@@ -1,7 +1,8 @@
 # import libraries & init spark session
 from pyspark.sql import SparkSession
+import os
 spark = SparkSession.builder.appName('app_elt').getOrCreate()
-
+import dotenv
 # load one archive
 df_device = spark.read.json('/home/clay/workspace/firstProject/docs/files/device/device_2022_6_7_19_39_24.json')
 
@@ -39,3 +40,5 @@ df_device.groupBy("manufacturer").count().show()
 # created new df grouped by 'manufacturer'
 df_grouped_manufacturer = df_device.groupBy("manufacturer").count()
 df_grouped_manufacturer.show()
+
+print(f"valor vaiavel = {os.environ.get('PYARROW_IGNORE_TIMEZONE')}")
